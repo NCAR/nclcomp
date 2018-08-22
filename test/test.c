@@ -19,7 +19,6 @@ int main(void) {
     int *nlevi;
     int *nlat;
     int *nlon;
-    int *nlevip1;
     int *nlevo;
-    vinth_cw(datai, datao, hbcofa, hbcofb, p0, plevi, plevo, intyp, ilev, psfc, msg, kxtrp, nlon, nlat, nlevi, nlevip1, nlevo);
+    vinth_cw(datai, datao, hbcofa, hbcofb, p0, plevi, plevo, intyp, ilev, psfc, msg, kxtrp, nlon, nlat, nlevi, nlevo);
 }
