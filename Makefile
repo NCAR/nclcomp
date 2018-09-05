@@ -3,8 +3,14 @@ FC = gfortran
 LDFLAGS = -lgfortran
 DEBUG = -g -O0
 
+all: fortran.o libnclcomp.so
 
-libnclcomp.so: c fortran
+fortran.o:
+	$(MAKE) -C fortran
+
+libnclcomp.so: fortran.o
 	$(CC) $(LDFLAGS) $(DEBUG) -shared -o libnclcomp.so c/*.c fortran/*.o
 
-all: libnclcomp.so
+clean:
+	-rm -rf libnclcomp.so libnclcomp.so.dSYM
+	$(MAKE) -C fortran clean
