@@ -5,6 +5,7 @@ DEBUG = -g -O0
 
 all: fortran.o libnclcomp.so
 
+.PHONY: fortran.o
 fortran.o:
 	$(MAKE) -C fortran
 
