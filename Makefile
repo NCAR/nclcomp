@@ -10,7 +10,7 @@ fortran.o:
 	$(MAKE) -C fortran
 
 libnclcomp.so: fortran.o
-	$(CC) $(LDFLAGS) $(DEBUG) -shared -o libnclcomp.so c/*.c fortran/*.o
+	$(CC) $(LDFLAGS) $(DEBUG) -shared -o libnclcomp.so c/*.c fortran/*.o c/nclcomp.h
 
 clean:
 	-rm -rf libnclcomp.so libnclcomp.so.dSYM
